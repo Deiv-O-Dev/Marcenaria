@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- ==========================================
+         CONFIGURAÇÕES BÁSICAS DA PÁGINA
+         ========================================== -->
+    <meta charset="UTF-8"> <!-- Permite acentos (ã, ç, é) -->
+    <title>Marcenaria Móveis Planejados</title> <!-- Texto da aba do navegador -->
+    
+    <!-- LINK PARA O ARQUIVO CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         1. TOPO (CABEÇALHO)
+         ========================================== -->
+    <div class="topo">
+        <div>
+            <!-- Logo e Nome da Empresa -->
+            <img src="M1.jpg" alt="Logo Madeira Viva" title="Logo" class="avatar">
+            <strong>🪵 Móveis Planejados</strong>
+        </div>
+        
+        <div>
+            <!-- Menu de Navegação (Links com âncora "#") -->
+            <a href="video.html">🎥 Vídeo</a> <!-- Link para OUTRA página -->
+            <a href="#empresa">Empresa</a>    <!-- Link para a MESMA página -->
+            <a href="#galeria">Galeria</a>
+            <a href="#orcamento">Orçamento</a>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         2. CONTAINER (ENVOLVE TODO O CONTEÚDO)
+         ========================================== -->
+    <div class="container">
+
+        <!-- --- BLOCO 1: SOBRE A EMPRESA --- -->
+        <div class="bloco" id="empresa">
+            <h2>Sobre a Empresa</h2>
+            <p>
+                A <strong>Marcenaria Móveis Planejados</strong> é uma marcenaria familiar fundada em
+                <em>2010</em>, especializada em móveis planejados com
+                <span class="destaque">madeira de reflorestamento</span>.
+            </p>
+            <p>Diferenciais: projetos personalizados, entrega em 30 dias e garantia de 2 anos.</p>
+        </div>
+
+        <!-- --- BLOCO 2: REDE SOCIAL / GALERIA --- -->
+        <div class="bloco" id="galeria">
+            <h2>Rede Social</h2>
+            
+            <!-- Imagem de perfil -->
+            <img src="avatar.png" alt="Logo" title="Imagem" style="width: 100px; border-radius: 5px;">
+            
+            <br><br> <!-- Quebra de linha para separar a imagem do link -->
+            
+            <!-- Link de texto -->
+            <a href="#galeria" style="color: #5c3a21; font-weight: bold;">📸 Clique aqui para ver mais do nosso trabalho</a>
+        </div>
+
+        <!-- --- BLOCO 3: TABELA DE ORÇAMENTO --- -->
+        <div class="bloco" id="orcamento">
+            <h2>Tabela de Orçamento</h2>
+            <table>
+                <!-- Cabeçalho da Tabela -->
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço (m²)</th>
+                        <th>Prazo</th>
+                    </tr>
+                </thead>
+                <!-- Corpo da Tabela -->
+                <tbody>
+                    <td>
+                Etapas do projeto:
+                <ol style="margin-left: 20px; margin-top: 5px;">
+                <li>Medição</li>
+                <li>Projeto 3D</li>
+                <li>Instalação</li>
+            </ol>
+        </td>
+                <!-- Rodapé da Tabela -->
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Desconto à vista</td> <!-- colspan=2 junta duas colunas -->
+                        <td>5%</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- BLOCO 4: formulário + cálculo JS -->
+        <div class="bloco">
+            <h2>Peça seu Orçamento</h2>
+
+            <label>Nome:</label>
+            <!-- O JS busca pelo id="nome" -->
+            <input type="text" id="nome" placeholder="Seu nome">
+
+            <label>Metragem (m²):</label>
+            <!-- O JS busca pelo id="metros" -->
+            <input type="number" id="metros" value="5" min="1">
+
+            <label>
+                <!-- O JS busca pelo id="avista" -->
+                <input type="checkbox" id="avista" style="width:auto;">
+                Pagamento à vista (5% de desconto)
+            </label>
+
+            <!-- O botão chama a função calcular() -->
+            <button onclick="calcular()">Calcular</button>
+
+            <!-- O JS busca pela id="resultado" para escrever o texto -->
+            <div class="resultado" id="resultado"></div>
+        </div>
+
+    </div> <!-- FIM DO CONTAINER -->
+
+    <!-- ==========================================
+         3. RODAPÉ (ÚNICO)
+         ========================================== -->
+    <div class="rodape">
+        <div>
+            <p>Marcenaria Móveis Planejados</p>
+            <p>Fale conosco — (71) 9 4002-8922</p>
+        </div>
+        
+        <!-- Botão para a página do vídeo -->
+        <a href="video.html" class="botao-video">▶ Assistir ao Vídeo Institucional</a>
+    </div>
+
+    <!-- ==========================================
+         4. LINK PARA O JAVASCRIPT
+         ========================================== -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* ---------------------------------------------------
+   1. RESET
+   Remove os espaços que o navegador coloca por padrão.
+   O * significa "todos os elementos da página".
+   --------------------------------------------------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ---------------------------------------------------
+   2. CORPO DA PÁGINA
+   Define a fonte, a cor de fundo e a cor do texto.
+   --------------------------------------------------- */
+body {
+    font-family: Arial, sans-serif; /* fonte sem serifa */
+    background: #fdf6ec;            /* fundo bege claro */
+    color: #3e2c1c;                 /* texto marrom escuro */
+    line-height: 1.6;               /* espaço entre linhas */
+}
+
+/* ---------------------------------------------------
+   3. TOPO
+   Barra marrom no topo. display: flex coloca o nome
+   e o menu lado a lado; space-between empurra um para
+   cada lado.
+   --------------------------------------------------- */
+.topo {
+    background: #5c3a21;
+    color: #fdf6ec;
+    padding: 15px 25px;                  /* espaço interno */
+    display: flex;                       /* itens em linha */
+    justify-content: space-between;      /* separa os extremos */
+    align-items: center;                 /* centraliza na vertical */
+}
+.topo a {
+    color: #fdf6ec;
+    text-decoration: none;               /* tira o sublinhado */
+    margin-left: 15px;                   /* espaço entre links */
+}
+.topo a:hover { color: #e0a96d; }        /* cor ao passar o mouse */
+
+/* ---------------------------------------------------
+   4. CONTAINER
+   Centraliza o conteúdo na tela.
+   --------------------------------------------------- */
+.container {
+    max-width: 800px;      /* largura máxima */
+    margin: 25px auto;     /* auto nas laterais = centraliza */
+    padding: 0 15px;       /* respiro nas bordas */
+}
+
+/* ---------------------------------------------------
+   5. BLOCO (cada seção)
+   Vira um "cartão branco" com faixa dourada à esquerda.
+   --------------------------------------------------- */
+.bloco {
+    background: #fff;                    /* fundo branco */
+    border-left: 5px solid #e0a96d;      /* faixa dourada */
+    border-radius: 8px;                  /* cantos arredondados */
+    padding: 20px;                       /* espaço interno */
+    margin-bottom: 20px;                 /* espaço abaixo */
+}
+.bloco h2 {
+    color: #5c3a21;
+    margin-bottom: 10px;
+}
+
+/* ---------------------------------------------------
+   6. DESTAQUE
+   Marca-texto dourado usado em <span class="destaque">.
+   --------------------------------------------------- */
+.destaque {
+    background: #e0a96d;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* ---------------------------------------------------
+   7. TABELA
+   Cabeçalho marrom; rodapé dourado.
+   border-collapse junta as bordas das células.
+   --------------------------------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #d8c3a5;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background: #5c3a21;
+    color: #fdf6ec;
+}
+tfoot td {
+    background: #e0a96d;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------
+   8. FORMULÁRIO
+   Labels em bloco (uma por linha) e campos com borda.
+   --------------------------------------------------- */
+label {
+    display: block;           /* cada label em sua linha */
+    margin-top: 10px;
+    font-weight: bold;
+}
+input, select, button {
+    padding: 6px 10px;
+    border: 1px solid #d8c3a5;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+button {
+    background: #5c3a21;
+    color: #fdf6ec;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;          /* mãozinha ao passar o mouse */
+    margin-top: 12px;
+}
+button:hover { background: #8b5e34; }
+
+/* ---------------------------------------------------
+   9. RESULTADO DO JAVASCRIPT
+   Caixa escondida (display: none) que o JS mostra
+   depois do cálculo.
+   --------------------------------------------------- */
+.resultado {
+    background: #fdf6ec;
+    border: 2px dashed #e0a96d;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 12px;
+    display: none; /* O JS muda isso para "block" quando o botão é clicado */
+}
+/* ---------------------------------------------------
+   10. RODAPÉ
+   --------------------------------------------------- */
+.rodape {
+    background: #5c3a21;
+    color: #fdf6ec;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------
+   11. PÁGINA DE VÍDEO (Adicionado)
+   Estilos específicos para a página video.html
+   --------------------------------------------------- */
+
+/* Centraliza o conteúdo e dá respiro nas bordas */
+.video-pagina {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Título da página do vídeo */
+.video-pagina h1 {
+    color: #5c3a21;
+    margin-bottom: 20px;
+}
+
+/* Estilo do player de vídeo */
+.video-pagina video {
+    max-width: 100%;          /* Não vaza da tela no celular */
+    border-radius: 8px;
+    border: 3px solid #e0a96d;
+}
+
+/* Botão/link de voltar */
+.voltar {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #5c3a21;
+    color: #fdf6ec;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.voltar:hover { background: #8b5e34; }
